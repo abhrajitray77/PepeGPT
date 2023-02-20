@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer  base {
+    body{
+        @apply bg-slate-800;
+    }
+}
+
 @layer components {
     .egItem {
         @apply p-4 bg-gray-700/50 rounded-lg max-w-[300px];
@@ -12,3 +19,16 @@
         transition-all duration-200 ease-out;
     }
 }
+/*for background blobs */
+@layer utilities {
+    .animation-delay-2000 {
+        animation-delay: 2s;
+    }
+    .animation-delay-4000 {
+        animation-delay: 4s;
+    }
+    .animation-delay-7000 {
+        animation-delay: 7s;
+    }
+  }
+  
