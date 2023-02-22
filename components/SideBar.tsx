@@ -17,7 +17,8 @@ const SideBar = () => {
             </div>
         </div>
 
-        <button className='border-gray-700 border chatRow'>
+        <button className='border-gray-700 border chatRow'
+        onClick={()=> signOut()}>
           <ArrowLeftOnRectangleIcon className="h-6 w-6" />
           <h1>Logout</h1>
         </button>
