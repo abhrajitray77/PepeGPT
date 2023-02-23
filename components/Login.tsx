@@ -6,8 +6,8 @@ import logo from "../public/imgs/chatgpt-logo.png";
 
 const Login = () => {
   return (
-    <div className="min-h-screen">
-      <div className="fixed grid grid-cols-2 place-items-center h-auto w-full -z-50 overflow-hidden ">
+    <div className="min-h-[100vh]">
+      <div className="fixed grid grid-cols-2 place-items-center h-[100vh] w-full -z-50 overflow-hidden ">
         <div className="w-72 h-72 bg-purple-300 
         rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob">
          </div>
