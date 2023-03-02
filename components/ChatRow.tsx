@@ -11,6 +11,8 @@ interface RowProps {
     id: string;
 };
 
+/*Deleting and creating chats*/
+    
 const ChatRow = (
     { id }: RowProps
 ) => {
