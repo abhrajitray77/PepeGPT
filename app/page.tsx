@@ -1,6 +1,8 @@
 import React from 'react'
 import { BoltIcon, ExclamationTriangleIcon, GlobeAsiaAustraliaIcon, LightBulbIcon, SunIcon } from "@heroicons/react/24/outline";
 
+//default homepage when session is active
+
 export default function Home() {
   return (
    <main className="flex flex-col items-center justify-center h-screen px-2 text-white">

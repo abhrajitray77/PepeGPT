@@ -7,7 +7,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
 import { useCollection } from 'react-firebase-hooks/firestore';
 
-interface RowProps {
+type RowProps = {
     id: string;
 };
 

@@ -7,9 +7,12 @@ import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import React from 'react'
 
+//New Chat button
 const NewChat = () => {
     const router = useRouter();
     const { data:session } = useSession();
+    
+    //navigates to new chat page route when a new document is created in firestore
   const createNewChat = async() => {
     const doc = await addDoc(
       collection(db, "users", session?.user?.email!, "chats"), {
@@ -17,7 +20,7 @@ const NewChat = () => {
         createdAt: serverTimestamp()
       }
     );
-
+      //dynamic route to id
     router.push(`/chat/${doc.id}`);
   }
 

@@ -4,6 +4,7 @@ import { PaperAirplaneIcon } from '@heroicons/react/24/outline';
 import { useSession } from 'next-auth/react';
 import React, { useState } from 'react'
 
+//Chat input form component
 type Props = {
     chatId: string;
 }

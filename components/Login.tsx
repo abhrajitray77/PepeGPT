@@ -4,6 +4,8 @@ import { signIn } from "next-auth/react";
 import Image from "next/image";
 import logo from "../public/imgs/chatgpt-logo.png";
 
+//Login Page when no session is active
+
 const Login = () => {
   return (
     <div className="min-h-[100vh]">

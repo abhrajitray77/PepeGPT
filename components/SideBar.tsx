@@ -10,6 +10,8 @@ import React from 'react'
 import NewChat from './NewChat'
 import ChatRow from './ChatRow'
 
+//sidebar component
+
 const SideBar = () => {
   const { data:session } = useSession();
   const [chats, loading, error] = useCollection(
@@ -18,11 +20,13 @@ const SideBar = () => {
        orderBy("createdAt", "asc")
   )
   );
-  console.log(chats);
   return (
     <div className="p-2 flex flex-col h-screen">
         <div className="flex-1">
-            <div className=''>
+
+          {/* Enclosure for new chat button and old chats */}
+
+            <div className='space-y-3'>
                 <NewChat />
 
                  {chats?.docs.map((chat) => (
@@ -30,6 +34,8 @@ const SideBar = () => {
                 ))}
             </div>
         </div>
+        
+        {/*Sign out button */}
 
         <button className='border-gray-700 border chatRow justify-between'
           onClick={()=> signOut()}>
