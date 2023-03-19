@@ -17,7 +17,7 @@ const ChatInput = ({ chatId }: Props) => {
   const { data: session } = useSession(); //getting session data
 
   //useSWR hook to get model
-  const model = "gpt-3.5-turbo";
+  const model = "text-davinci-003";
 
   //function to send message to firestore
   const sendMessage = async (e: React.FormEvent) => {
@@ -33,35 +33,46 @@ const ChatInput = ({ chatId }: Props) => {
       user: {
         _id: session?.user?.email!,
         name: session?.user?.name!,
-        image:                          //if user has image, use it, else use avatar with a random seed
+        //if user has image, use it, else use avatar with a random seed
+        image:
           session?.user?.image! ||
           `https://avatars.dicebear.com/api/human/${session?.user?.email!}.svg`,
       },
     };
 
     await addDoc(
-        collection(db, 'users', session?.user?.email!, 'chats', chatId, 'messages'),
-        message
+      collection(
+        db,
+        "users",
+        session?.user?.email!,
+        "chats",
+        chatId,
+        "messages"
+      ),
+      message
     ); //adding message to firestore
 
     //toast notification
 
-    const notification = toast.loading('ChatGPT is working on it...')
+    const notification = toast.loading("ChatGPT is working on it...");
 
-    await fetch('/api/askQuestion', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            promt: input, chatId, model, session,
-        }),
-    }).then(()=>{
-        //toast notification for success message
-        toast.success('Response has arrived!', {
-            id: notification,
-        })
-    })
+    await fetch("/api/askQuestion", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        promt: input,
+        chatId,
+        model,
+        session,
+      }),
+    }).then(() => {
+      //toast notification for success message
+      toast.success("Response has arrived!", {
+        id: notification,
+      });
+    });
   };
 
   return (
