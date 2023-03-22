@@ -13,7 +13,7 @@ const query = async (prompt: string, model: string) => {
     .then((res) => res.data.choices[0].text)
     .catch(
       (err) =>
-        `ChatGPT wasn't able to find awesome answers for you. (Error: ${err.message})`
+        `PepeGPT wasn't able to find awesome answers for you. (Error: ${err.message})`
     );
   return res;
 };

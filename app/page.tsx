@@ -6,7 +6,7 @@ import { BoltIcon, ExclamationTriangleIcon, GlobeAsiaAustraliaIcon, LightBulbIco
 export default function Home() {
   return (
    <main className="flex flex-col items-center justify-center h-screen px-2 text-white">
-    <h1 className="text-4xl font-bold mb-20">ChatGPT</h1>
+    <h1 className="text-4xl font-bold mb-20">PepeGPT</h1>
       
       <div className="grid grid-cols-3 space-x-2 text-center">
         <div>

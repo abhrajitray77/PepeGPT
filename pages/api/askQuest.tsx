@@ -33,8 +33,8 @@ export default async function handler(
     text: response || "Sorry, I don't know the answer to that question yet!",
     createTime: admin.firestore.Timestamp.now(),
     user: {
-      _id: "ChatGPT",
-      name: "ChatGPT",
+      _id: "PepeGPT",
+      name: "PepeGPT",
       image:
         "https://e7.pngegg.com/pngimages/922/865/png-clipart-discord-pepe-the-frog-video-games-pepe.png",
     },

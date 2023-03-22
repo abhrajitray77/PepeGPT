@@ -7,10 +7,10 @@ type Props = {
 };
 
 const Message = ({ message }: Props) => {
-    const isChatGPT = message.user.name === "ChatGPT";
+    const isPepeGPT = message.user.name === "PepeGPT";
 
   return (
-    <div className={`py-5 text-[#afda9e] ${isChatGPT && "bg-[#7cb665] text-[#121212]"}`}>
+    <div className={`py-5 text-[#afda9e] ${isPepeGPT && "bg-[#7cb665] text-[#121212]"}`}>
       <div className="flex space-x-5 px-6 max-w-2xl mx-auto">
         <Image
           src={message.user.image}

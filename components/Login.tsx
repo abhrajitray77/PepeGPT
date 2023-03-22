@@ -2,7 +2,7 @@
 
 import { signIn } from "next-auth/react";
 import Image from "next/image";
-import logo from "../public/imgs/chatgpt-logo.png";
+import logo from "../public/imgs/pepe.webp";
 
 //Login Page when no session is active
 
@@ -28,15 +28,15 @@ const Login = () => {
       </div>
       <div className="flex justify-center flex-col items-center h-screen
       space-y-11">
-        <Image className="invert"
+        <Image className="w-[100px] h-[100px] md:w-[300px] md:h-[300px]"
         src= {logo}
-        width= {300}
-        height= {300}
+        width= {700}
+        height= {700}
         alt= "logo-gpt"
         />
         <button onClick={()=> signIn("google")}
         className="text-white font-bold text-3xl">
-          Sign In to use ChatGPT
+          Sign In to use PepeGPT
         </button>
       </div>
 

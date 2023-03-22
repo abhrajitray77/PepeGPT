@@ -54,7 +54,7 @@ const ChatInput = ({ chatId }: Props) => {
 
     //toast notification
 
-    const notification = toast.loading("ChatGPT is working on it...");
+    const notification = toast.loading("PepeGPT is working on it...");
 
     await fetch("/api/askQuest", {
       method: "POST",
