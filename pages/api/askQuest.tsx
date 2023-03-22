@@ -27,11 +27,10 @@ export default async function handler(
 
   //Query the model
 
-  const response = await query(prompt, chatId, model);
+  const response = await query(prompt,  model);
 
   const message: Message = {
     text: response || "Sorry, I don't know the answer to that question yet!",
-    // sender: "ChatGPT",
     createTime: admin.firestore.Timestamp.now(),
     user: {
       _id: "ChatGPT",

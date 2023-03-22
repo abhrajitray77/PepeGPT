@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["links.papareact.com"]
+    domains: ["e7.pngegg.com"],
   },
   experimental: {
     appDir: true,

@@ -4,7 +4,7 @@ import { db } from "@/firebase";
 import { PaperAirplaneIcon } from "@heroicons/react/24/outline";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { useSession } from "next-auth/react";
-import React, { useState } from "react";
+import React, { FormEvent, useState } from "react";
 import { toast } from "react-hot-toast";
 
 //Chat input form component
@@ -20,7 +20,7 @@ const ChatInput = ({ chatId }: Props) => {
   const model = "text-davinci-003";
 
   //function to send message to firestore
-  const sendMessage = async (e: React.FormEvent) => {
+  const sendMessage = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!prompt) return; //if prompt is empty, return
 
@@ -56,13 +56,13 @@ const ChatInput = ({ chatId }: Props) => {
 
     const notification = toast.loading("ChatGPT is working on it...");
 
-    await fetch("/api/askQuestion", {
+    await fetch("/api/askQuest", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        promt: input,
+        prompt: input,
         chatId,
         model,
         session,
