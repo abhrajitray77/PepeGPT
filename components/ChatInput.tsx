@@ -6,6 +6,8 @@ import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { useSession } from "next-auth/react";
 import React, { FormEvent, useState } from "react";
 import { toast } from "react-hot-toast";
+import useSWR from 'swr'
+
 
 //Chat input form component
 type Props = {
@@ -15,9 +17,9 @@ type Props = {
 const ChatInput = ({ chatId }: Props) => {
   const [prompt, setPrompt] = useState(""); //prompt state
   const { data: session } = useSession(); //getting session data
-
-  //useSWR hook to get model
-  const model = "text-davinci-003";
+  const {data:model } = useSWR("model", {
+    fallbackData: 'text-davinci-003'
+});
 
   //function to send message to firestore
   const sendMessage = async (e: FormEvent<HTMLFormElement>) => {
@@ -98,6 +100,8 @@ const ChatInput = ({ chatId }: Props) => {
           <PaperAirplaneIcon className="h-5 w-5 -rotate-45" />
         </button>
       </form>
+
+      
     </div>
   );
 };
