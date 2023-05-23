@@ -1,4 +1,8 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## GPT-3 Chatbot
+[pepe.webm](https://github.com/abhrajitray77/PepeGPT/assets/67530432/f147517f-3b1e-472b-9ff3-278ab944790f)
+
+## Tech Stack:
+Next.js 13, Tailwind CSS,Typescript, Firebase, OpenAI API
 
 ## Getting Started
 
