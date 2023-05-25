@@ -1,5 +1,7 @@
 ## GPT-3 Chatbot
-[pepe.webm](https://github.com/abhrajitray77/PepeGPT/assets/67530432/f147517f-3b1e-472b-9ff3-278ab944790f)
+
+[pepe.mp4](https://github.com/abhrajitray77/PepeGPT/assets/67530432/aacdc9ed-a587-47a6-9f61-c365af078375)
+
 
 ## Tech Stack:
 Next.js 13, Tailwind CSS,Typescript, Firebase, OpenAI API
